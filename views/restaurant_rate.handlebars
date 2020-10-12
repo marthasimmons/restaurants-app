@@ -1,0 +1,20 @@
+<!---Gets nav--->
+{{>nav}}
+
+<div class="header">
+    <h1>Rate {{restaurant.name}}</h1>
+</div>
+
+<section>
+    <!---Gets user rating and submits on button press--->
+    <article class="singleBlock">
+        <form action="/restaurant_rate/{{restaurant.id}}" method="POST">
+            <div>
+                <label style="font-size: 2rem;">Your Rating:</label>
+                <br>
+                <input type="number" name="rating"  min="1" max="5" value="5" required/>
+            </div>
+            <br>
+            <button>Rate</button>
+    </article>
+</section>

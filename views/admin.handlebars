@@ -1,0 +1,23 @@
+<!---Gets nav--->
+{{>nav}}
+
+<div class="header">
+    <h1>Password Required</h1>
+</div>
+
+<section>
+    <article class="singleBlock">
+    <!---Creates button for each restaurant which lead to specific booking pages--->
+        <form action="/admin_login" method="POST">
+            <div>
+                <label style="font-size: 2rem;">Password:</label>
+                <br>
+                <input type="password" name="password" />
+                <br>
+            </div>
+            <div>
+            <button>Submit</button>
+            </div>
+        </form>
+    </article>
+</section>

@@ -1,0 +1,26 @@
+<!---Gets nav--->
+{{>nav}}
+
+<div class="header">
+    <h1>Restaurants</h1>
+</div>
+
+<div class="bookNow">
+    <a href="/book"> 
+        <p>Book Now</p>
+    </a>
+</div>
+
+
+<section>
+    <!---Displays restaurants--->
+    {{#each restaurants}}
+        <a href="/restaurant/{{this.id}}">  
+        <article >
+            <main>{{this.name}}</main>
+            <img src="{{this.image}}"/>
+            <p>{{this.description}}</p>
+        </article>
+        </a>
+    {{/each}}
+</section>

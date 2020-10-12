@@ -1,0 +1,21 @@
+<!---Gets nav--->
+{{>admin_nav}}
+
+<div class="header">
+    <h1>Add menu</h1>
+</div>
+
+<section>
+    <!---Gets info on new menu and submits on button click--->
+    <article class="singleBlock">
+        <form action="/admin_restaurants_add_menu/{{restaurant.id}}" method="POST">
+            <div>
+                <label style="font-size: 2rem;">Name:</label>
+                <br>
+                <input name="name" required/>
+            </div>
+            <input name="RestaurantId" type="hidden" value={{restaurant.id}} />
+            <button>Add</button>
+        </form>
+    </article>
+</section>

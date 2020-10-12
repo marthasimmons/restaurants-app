@@ -1,0 +1,20 @@
+<!---Gets nav--->
+{{>nav}}
+
+<div class="header">
+    <h1>Select a restaurant</h1>
+</div>
+
+
+<section>
+    <article class="singleBlock">
+    <!---Creates button for each restaurant which lead to specific booking pages--->
+    {{#each restaurants}}
+        <form action="/restaurant_book/{{this.id}}" method="GET">
+            <br>
+            <button>Book {{this.name}}</button>
+            <br>
+        </form>
+    {{/each}}
+    </article>
+</section>

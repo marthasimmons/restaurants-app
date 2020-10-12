@@ -1,0 +1,40 @@
+<!---Gets nav--->
+{{>admin_nav}}
+
+<div class="header">
+    <h1>Add restaurant</h1>
+</div>
+
+<section>
+    <!---Gets info on new restaurant and submits on button click--->
+    <article class="singleBlock">
+        <form action="/admin_restaurants_add" method="POST">
+            <div>
+                <label style="font-size: 2rem;">Name:</label>
+                <br>
+                <input name="name" required/>
+            </div>
+            <div>
+                <label style="font-size: 2rem;">Description:</label>
+                <br>
+                <input name="description" required/>
+            </div>
+            <div>
+                <label style="font-size: 2rem;">Image:</label>
+                <br>
+                <input name="image" required/>
+            </div>
+            <div>
+                <label style="font-size: 2rem;">Image crop:</label>
+                <br>
+                <label>Top</label>
+                <input name="imageCrop" type="radio" value="top">
+                <label>Middle</label>
+                <input name="imageCrop" type="radio" value="center">
+                <label>Bottom</label>
+                <input name="imageCrop" type="radio" value="bottom">
+            </div>
+            <button>Add</button>
+        </form>
+    </article>
+</section>

@@ -1,0 +1,41 @@
+<!---Gets nav--->
+{{>admin_nav}}
+
+<!---Displays image in header--->
+<div class="header" style="background-image: url({{restaurant.image}}); background-repeat: no-repeat;background-blend-mode: screen; background-size: cover; background-position: {{restaurant.imageCrop}};">
+    <h1>{{restaurant.name}}</h1>
+</div>
+
+<div class="bookNow">
+    <!---Admin version allows user to edit restaurant--->
+    <a href="/admin_restaurant_edit/{{restaurant.id}}"> 
+        <p>Edit</p>
+    </a>
+</div>
+
+
+<section>
+    <!---Displays menus--->
+    {{#each menus}}
+        <article class="menu" style="position: relative; min-height: 50rem;">
+            <main style="position: absolute; top: 5%; left: 50%; transform: translate(-50%,-5%);">{{this.name}}</main>
+            <dl style="position: absolute; top: 20%; left: 50%; transform: translate(-50%,0%); ">
+                <!---Displays items--->
+                {{#each this.items}}
+                    <div>
+                        <p>{{this.name}} £{{this.price}}<p>
+                    </div>
+                {{/each}}
+            </dl>
+            <a href="/admin_menu_edit/{{this.id}}">
+                <button class="edit">Edit</button>
+            </a>
+        </article>
+    {{/each}}
+    <!---Admin version allows user to add menus--->
+    <a href="/admin_restaurant_add_menu/{{restaurant.id}}"> 
+         <article style="position: relative; height: 50rem;">
+            <main style="font-size: 180px; position: absolute; top: 50%; left: 50%; padding: 0; transform: translate(-50%,-50%);">+</main>
+        </article>
+    </a>
+</section>

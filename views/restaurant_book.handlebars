@@ -1,0 +1,32 @@
+<!---Gets nav--->
+{{>nav}}
+
+<div class="header">
+    <h1>Book {{restaurant.name}}</h1>
+</div>
+
+<section>
+    <!---Gets booking info and submits on button press--->
+    <article class="singleBlock">
+        <form action="/restaurant_add_booking/{{restaurant.id}}" method="POST">
+            <div>
+                <label style="font-size: 2rem;">Your Name:</label>
+                <br>
+                <input name="name" required/>
+            </div>
+            <div>
+                <label style="font-size: 2rem;">Date:</label>
+                <br>
+                <input type="date" name="date" required/>
+            </div>
+            <div>
+                <label style="font-size: 2rem;">Time:</label>
+                <br>
+                <input type="time" name="date" required/>
+            </div>
+            <br>
+            <input name="RestaurantId" type="hidden" value={{restaurant.id}} />
+            <button>Book</button>
+        </form>
+    </article>
+</section>

@@ -1,0 +1,48 @@
+<!---Gets nav--->
+{{>admin_nav}}
+
+<div class="header">
+    <h1>Edit {{menu.name}}</h1>
+</div>
+
+<section>
+    <!---Gets updatd menu info and submits on button click--->
+    <article class="singleBlock">
+        <form action="/admin_menu_edit/{{menu.id}}" method="POST">
+            <div>
+                <label style="font-size: 2rem;">Menu Name:</label>
+                <br>
+                <input name="name" value="{{menu.name}}" />
+            </div>
+            <button>Update Name</button>
+        </form>
+        <br>
+        <br>
+        <form action="/admin_menu_item_add/{{menu.id}}" method="POST">
+            <div>
+                <label style="font-size: 2rem;">New Item Name:</label>
+                <br>
+                <input name="name" />
+                <br>
+                <label style="font-size: 2rem;">New Item Price:</label>
+                <br>
+                <input name="price" type="number" step=0.05 />
+            </div>
+            <button>Add Item</button>
+        </form>
+        <br>
+        <!---Creates delete button for each menu item--->
+        {{#each items}}
+            <br>
+            <form action="/admin_menu_item_delete/{{this.id}}" method="POST">
+            <button>Delete {{this.name}}</button>
+            </form>
+        {{/each}}
+        <br>
+        <br>
+        <!---Deletes menu on button press--->
+        <form action="/admin_menu_delete/{{menu.id}}" method="GET">
+            <button>Delete Menu</button>
+        </form>
+    </article>
+</section>

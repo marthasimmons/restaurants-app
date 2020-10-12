@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+
+body {
+    background-color:  #C1EEE9;
+    margin-top: 60px;
+}
+
+.navbar {
+    background-color: white;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    border-bottom: 3px solid #2F3337;
+    z-index: 2;
+}
+
+.navbar div {
+    float: right;
+    display: block;
+    
+}
+
+.navbar p {
+    font-family: Futura;  
+    src: url(http://www.example.com/wp-content/themes/your-theme/fonts/Futura-Regular.ttf);  
+    font-weight: normal; 
+    color: #2F3337;
+    font-size: 20px;
+    padding: 16px 16px;
+}
+
+.navbar p:hover {
+    color:#D8315B;
+    cursor: pointer;
+}
+
+.dropDown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropDownContent {
+    display: none !important;
+    background-color: white;
+    position: absolute;
+    border-left: 3px solid #2F3337;
+    border-right: 3px solid #2F3337;
+    border-bottom: 3px solid #2F3337;
+}
+
+.dropDown:hover > .dropDownContent {
+    display: block !important;
+}
+
+.header {
+    height: 500px;
+    display: table;
+    background-color: #D8315B;
+    width: 100%;
+    border-bottom: 3px solid #2F3337;
+}
+
+.header h1{
+    font-family: Futura;  
+    font-size: 75px;
+    color:white;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #2F3337;
+
+}
+
+
+.bookNow {
+    position: relative;
+    top: -10rem;
+    display: flex;
+    justify-content: center;
+} 
+
+.bookNow p{
+    text-align: center;
+    background-color: white;
+    color: #2F3337;
+    width: 150px;
+    padding: 8px 8px;
+    font-family: Futura;  
+    font-size: 25px;
+    src: url(http://www.example.com/wp-content/themes/your-theme/fonts/Futura-Regular.ttf); 
+    border: 3px solid #2F3337;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: 10rem;
+}
+
+.bookNow p:hover {
+    color:#D8315B;
+    cursor: pointer;
+}
+
+
+article main {
+    padding: 8px 8px;
+}
+
+article:hover {
+    color:#D8315B;
+    cursor: pointer;
+}
+
+article:hover > img {
+    border: 3px solid #D8315B;
+}
+
+
+article img {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    border: 3px solid #2F3337;
+}
+
+article p {
+    font-size: 20px;
+    padding: 8px 8px;
+}
+
+article {
+    background-color: white;
+    border: 3px solid #2F3337;
+    text-align: center;
+    font-family: Futura;  
+    font-size: 25px;
+    src: url(http://www.example.com/wp-content/themes/your-theme/fonts/Futura-Regular.ttf);  
+    font-weight: normal; 
+    color: #2F3337;
+}
+
+
+.singleBlock:hover {
+    color: #2F3337;
+    cursor: default;
+}
+
+.menu:hover {
+    color: #2F3337;
+    cursor: default;
+    border: 3px solid #2F3337;
+}
+
+.menu {
+    top: 0px !important;
+}
+
+form div{
+    margin-bottom: 1rem;
+}
+
+input {
+    font-size: 20px;
+    padding: 8px 8px;
+    font-family: Futura;  
+    src: url(http://www.example.com/wp-content/themes/your-theme/fonts/Futura-Regular.ttf); 
+    outline: none; 
+    border: 3px solid #2F3337;
+}
+
+button {
+    font-size: 2rem;
+    padding: 8px 8px;
+    font-family: Futura;  
+    src: url(http://www.example.com/wp-content/themes/your-theme/fonts/Futura-Regular.ttf);  
+    border: 3px solid #2F3337;
+    background-color: white;
+    outline: none; 
+}
+
+button:hover {
+    color:#D8315B ;
+    cursor: pointer;
+}
+
+.edit {
+    font-size: 20px;
+    padding: 4px 4px; 
+    position: absolute; 
+    top: 95%; 
+    left: 50%; 
+    transform: translate(-50%,-95%);
+}
+
+
+@media screen {
+    section {
+        padding: 0;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: none;
+        position: relative;
+        top: -7.5rem;
+        justify-content: center;
+    }
+    article {
+        margin: 0;
+        width: 25rem;
+        margin: 0.5rem;
+    }
+    .singleBlock {
+        width: 15rem;
+        padding: 5rem;
+    } 
+      
+}
+
+
+@media screen and (min-width: 55rem) {
+    section {
+        grid-template-columns: auto auto; 
+    }
+    .header h1 {
+        font-size: 100px;
+    }
+    .intro {
+        width: 30rem;
+        padding: 8rem;
+    }
+
+}
+
+@media screen and (min-width: 80rem) {
+      section {
+          grid-template-columns: auto auto auto; 
+      }
+      .singleBlock {
+        width: 40rem;
+        padding: 10rem;
+    }
+
+  }
+
+@media screen and (min-width: 110rem) {
+    section {
+        grid-template-columns: auto auto auto auto; 
+    }
+    
+}

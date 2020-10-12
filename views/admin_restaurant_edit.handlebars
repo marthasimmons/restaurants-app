@@ -1,0 +1,46 @@
+<!---Gets nav--->
+{{>admin_nav}}
+
+<div class="header">
+    <h1>Edit {{restaurant.name}}</h1>
+</div>
+
+<section>
+    <!---Gets updated restaurant info and submits on button click--->
+    <article class="singleBlock">
+        <form action="/admin_restaurant_edit/{{restaurant.id}}" method="POST">
+            <div>
+                <label style="font-size: 2rem;">Name:</label>
+                <br>
+                <input name="name" value="{{restaurant.name}}" />
+            </div>
+            <div>
+                <label style="font-size: 2rem;">Description:</label>
+                <br>
+                <input name="description" value="{{restaurant.description}}" />
+            </div>
+            <div>
+                <label style="font-size: 2rem;">Image:</label>
+                <br>
+                <input name="image" value="{{restaurant.image}}"/>
+            </div>
+            <div>
+                <label style="font-size: 2rem;">Image crop:</label>
+                <br>
+                <label>Top</label>
+                <input name="imageCrop" type="radio" value="top" required>
+                <label>Middle</label>
+                <input name="imageCrop" type="radio" value="center">
+                <label>Bottom</label>
+                <input name="imageCrop" type="radio" value="bottom">
+            </div>
+            <br>
+            <button>Update Restaurant</button>
+        </form>
+        <br>
+        <!---Deletes restaurant on button click--->
+        <form action="/admin_restaurant_delete/{{restaurant.id}}" method="GET">
+            <button>Delete Restaurant</button>
+        </form>
+    </article>
+</section>

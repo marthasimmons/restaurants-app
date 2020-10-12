@@ -1,0 +1,20 @@
+<div class="navbar">
+        <div>
+            <a href="/home">
+                <p> Exit Admin </p>
+            </a>
+        </div>
+
+        <div class="dropDown">
+            <a href="/admin_restaurants">
+                <p  class="dropDownButton"> Restaurants </p>
+            </a>
+            <div class="dropDownContent"> 
+                {{#each (giveMeRestaurants)}}
+                    <a href='/admin_restaurant/{{this.id}}'>
+                        <p>{{this.name}}</p>
+                    </a>
+                {{/each}}
+            </div> 
+        </div>
+</div>
